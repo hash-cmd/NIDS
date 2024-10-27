@@ -2,3 +2,137 @@
     background-image: url("../img/login_background.jpg");
     background-size: contain;
 }
+
+.nav-bar-manual {
+    background-color: navy;
+}
+
+.menu-manual {
+    width: 40px;
+    height: 40px;
+}
+
+.bg-gradient-danger {
+    background: linear-gradient(135deg, #ff4b4b, #d60000);
+}
+
+.bg-gradient-warning {
+    background: linear-gradient(135deg, #ffc107, #ff8c00);
+}
+
+.bg-gradient-primary {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+}
+
+.bg-gradient-dark {
+    background: linear-gradient(135deg, #343a40, #212529);
+}
+
+/* Center and style text */
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.color-box {
+    width: 20px;
+    /* Width of the color box */
+    height: 20px;
+    /* Height of the color box */
+    margin-right: 10px;
+    /* Spacing between color box and label */
+}
+
+.legend {
+    margin-top: 20px;
+    /* Add space above the legend */
+}
+
+.offcanvas-body a:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    /* Light background on hover */
+    border-radius: 0.25rem;
+    /* Rounded corners */
+}
+
+.dropdown-menu {
+    padding: 0.5rem 1rem;
+    /* Adjust padding of dropdown */
+}
+
+.dropdown-menu a {
+    color: #333;
+    /* Dropdown item color */
+}
+
+.dropdown-menu a:hover {
+    background-color: rgba(75, 192, 192, 0.2);
+    /* Change background on hover */
+}
+
+.link-primary-hover {
+    color: #495057;
+    transition: color 0.2s, background-color 0.2s;
+}
+
+.link-primary-hover:hover {
+    color: #fff;
+    background: linear-gradient(135deg, #007bff, #0056b3);
+}
+
+.offcanvas-body h3,
+.offcanvas-body ul li {
+    margin-top: 0.5rem;
+}
+
+.dropdown-menu {
+    margin-top: 0.2rem;
+}
+
+/* Link Styles */
+.rule-link {
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.rule-item {
+    color: #343a40;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.2s;
+}
+
+.rule-item:hover {
+    color: #0d6efd;
+    transform: scale(1.05);
+}
+
+.divider {
+    color: #6c757d;
+    font-size: 1.2rem;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+
+ .nav-tabs .nav-link.active {
+    color: #007bff;
+    border-top: 3px solid #007bff;
+    border-left: 1px solid #007bff;
+    border-right: 1px solid #007bff;
+    border-radius: 0px;
+    background-color: white;
+ }
+
+ .nav-tabs .nav-link {
+    border: none;
+ }
+
+ .border-manual {
+    border-left: 0.5px solid #969696;
+    border-right: 0.5px solid #969696;
+    border-bottom: 0.5px solid #969696;
+}
