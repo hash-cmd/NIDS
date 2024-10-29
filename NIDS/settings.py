@@ -48,7 +48,7 @@ INSTALLED_APPS = [
     'channels',
     'monitor',
     'authentication',
-    'requests'
+    'requests',
 ]
 
 MIDDLEWARE = [
@@ -91,8 +91,12 @@ ASGI_APPLICATION = 'NIDS.asgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': config('DB_NAME'),
+        'USER': config('DB_USER'),
+        'PASSWORD': config('DB_PASSWORD'),
+        'HOST': config('DB_HOST', default='localhost'),
+        'PORT': config('DB_PORT', default='5432'),
     }
 }
 
@@ -144,10 +148,10 @@ AUTHENTICATION_BACKENDS = (
     'allauth.account.auth_backends.AuthenticationBackend',
 )
 
-SITE_ID = 1  # Ensure this is set if using sites framework
+SITE_ID = 1 
 
-LOGIN_REDIRECT_URL = '/'  # Redirect after login
-LOGOUT_REDIRECT_URL = '/'  # Redirect after logout
+LOGIN_REDIRECT_URL = '/dashboard/'  
+LOGOUT_REDIRECT_URL = '/auth/login/'  
 
 
 
@@ -163,8 +167,8 @@ SOCIALACCOUNT_PROVIDERS = {
     }
 }
 
-LOGIN_REDIRECT_URL = '/'
-LOGOUT_REDIRECT_URL = '/'
+LOGIN_REDIRECT_URL = '/dashboard/'
+LOGOUT_REDIRECT_URL = '/auth/login/'
 
 WHITENOISE_USE_FINDERS = True  
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
